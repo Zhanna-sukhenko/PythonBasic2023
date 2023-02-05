@@ -8,4 +8,3 @@ print("per 1 desk", d)
 
 print("desks", (a+b+c)//d)
 print("left free places", (a+b+c)%d)
-
