@@ -1,7 +1,0 @@
-squared_num = 50
-while True:
-    counter += 1
-    pow_2 = 2 ** counter
-    if pow_2 == 64:
-        print("counter", counter)
-        break
