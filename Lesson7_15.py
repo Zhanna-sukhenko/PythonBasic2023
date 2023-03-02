@@ -4,8 +4,8 @@ orders = [
     [77226, 'Head First Python, Paul Barry', 3, 32.95],
     [88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99]
 ]
-invoice_totals = list(map(lambda x: x if x[1] >= 100 else (x[0], x[1] + 10),
+total = list(map(lambda x: x if x[1] >= 100 else (x[0], x[1] + 10),
                           map(lambda x: (x[0], x[2] * x[3]), orders)))
 
-print(invoice_totals)
+print(total)
 
