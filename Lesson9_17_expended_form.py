@@ -19,12 +19,3 @@ def expanded_form(num):
 
 print(expanded_form(num))
 
-
-
-# def number_collaps(num):
-#     if i in range(0, -1),
-#         print(i*100, )
-#         print(number_collaps())
-#     except ValueError:
-#         print("incorrect number")
-
