@@ -6,16 +6,28 @@
 # expanded_form(70304) # повинно повернути '70000 + 300 + 4'
 # Уважно: всі числа які будуть передаватись повинні бути більше 0, інакше треба показати помилку.
 
+# num = int(input("Enter a num more than 10: "))
+#
+# def expanded_form(num):
+#     result = []
+#
+#     for index, digit in enumerate(str(num)[::-1]):
+#         if int(digit) != 0:
+#             result.append(digit + ('0' * index))
+#         elif num == 0:
+#             raise Exception("number is not > 0")
+#     return ' + '.join(result[::-1])
+#
+# print(expanded_form(num))
+
 num = int(input("Enter a num more than 10: "))
 def expanded_form(num):
+    if num == 0:
+        raise Exception("number is not > 0")
     result = []
-
     for index, digit in enumerate(str(num)[::-1]):
         if int(digit) != 0:
             result.append(digit + ('0' * index))
-        elif num == 0:
-            raise Exception("number is not > 0")
     return ' + '.join(result[::-1])
 
 print(expanded_form(num))
-
