@@ -3,22 +3,40 @@
 # to a list of numbers with the strip() and map() methods, respectively.
 # Then, compute the total using the sum() method.
 
-num = int(input("Enter your num: "))
+# num = int(input("Enter your num: "))
 
-def number_collaps(num): #getSum()
+# def number_collaps(num): #getSum()
+#     if num <= 0:
+#         raise Exception("number less or equal 0")
+#     sum = 0
+#     for i in str(num):
+#         sum += int(i)
+#     return sum
+# def collapse_number(num):
+#     num = number_collaps(num)
+#     num = number_collaps(num)
+#     num = number_collaps(num)
+#     num = number_collaps(num)
+#     num = number_collaps(num)
+#     return num
+#
+# print(collapse_number(num))
+
+num = int(input("Enter your num: "))
+def number_collapse(val): #getSum()
     if num <= 0:
         raise Exception("number less or equal 0")
-    sum = 0
-    for i in str(num):
-        sum += int(i)
-    return sum
-def collapse_number(num):
-    num = number_collaps(num)
-    num = number_collaps(num)
-    num = number_collaps(num)
-    num = number_collaps(num)
-    num = number_collaps(num)
-    return num
+
+    val = num
+    while val > 10:
+        _sum = 0
+        for i in str(val):
+            _sum += int(i)
+        val = _sum
+    return val
+
+def collapse_number(val):
+    return number_collapse(val)
+
 
 print(collapse_number(num))
-
